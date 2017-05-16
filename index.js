@@ -1,11 +1,11 @@
-jQuery(function($) {
+jQuery(function ($) {
     // dummy primary keyword. It'll come from user input
     var primaryKeyword = ["test", "theme", "word"]
 
-// messages store
+    // messages store
     var messages = []
 
-// calling validating rules
+    // calling validating rules
     messages = validateTitle(messages)
 
     messages = validateMetaInformation(messages)
@@ -60,7 +60,7 @@ jQuery(function($) {
      */
     function validateMetaInformation(messages) {
 
-        if($('meta[name=description]').length > 0) {
+        if ($('meta[name=description]').length > 0) {
             var metaDescription = $('meta[name=description]').attr("content");
 
             if (metaDescription.length < 20 || metaDescription.length > 160) {
